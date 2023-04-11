@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name mounting)(type Legacy)(uri $KIPRJMOD/../common/library/mounting.lib)(options "")(descr ""))
+  (lib (name barrel_jack)(type Legacy)(uri $KIPRJMOD/../common/library/barrel_jack.lib)(options "")(descr ""))
+  (lib (name led_socket)(type Legacy)(uri $KIPRJMOD/../common/library/led_socket.lib)(options "")(descr ""))
+  (lib (name solder_select)(type Legacy)(uri $KIPRJMOD/../common/library/solder_select.lib)(options "")(descr ""))
+)

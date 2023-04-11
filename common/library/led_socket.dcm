@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LED_Socket
+D CMOS Hex Voltage-Level Shifter for TTL-to-CMOS or CMOS-to-CMOS, DIP-16/SOIC-16/TSSOP-16
+K Level-shifter
+F http://www.ti.com/lit/ds/symlink/cd4504b.pdf
+$ENDCMP
+#
+#End Doc Library

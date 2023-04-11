@@ -1,0 +1,1003 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 2
+Title "LED Tuning Board"
+Date ""
+Rev "A"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 "LED, mostly by trial and error and all that."
+Comment4 "A board put together so that I can comfortably find the correct resistor to use with an"
+$EndDescr
+$Comp
+L mounting:Mounting M2
+U 1 1 6002E2AC
+P 10900 550
+F 0 "M2" H 10900 650 50  0001 C CNN
+F 1 "Mounting" H 10900 475 50  0001 C CNN
+F 2 "mounting:M3_pin" H 10900 550 50  0001 C CNN
+F 3 "~" H 10900 550 50  0001 C CNN
+	1    10900 550 
+	1    0    0    -1  
+$EndComp
+$Comp
+L mounting:Mounting M4
+U 1 1 6002EC01
+P 11150 550
+F 0 "M4" H 11150 650 50  0001 C CNN
+F 1 "Mounting" H 11150 475 50  0001 C CNN
+F 2 "mounting:M3_pin" H 11150 550 50  0001 C CNN
+F 3 "~" H 11150 550 50  0001 C CNN
+	1    11150 550 
+	1    0    0    -1  
+$EndComp
+$Comp
+L mounting:Mounting M3
+U 1 1 6002E709
+P 11025 550
+F 0 "M3" H 11025 650 50  0001 C CNN
+F 1 "Mounting" H 11025 475 50  0001 C CNN
+F 2 "mounting:M3_pin" H 11025 550 50  0001 C CNN
+F 3 "~" H 11025 550 50  0001 C CNN
+	1    11025 550 
+	1    0    0    -1  
+$EndComp
+$Comp
+L mounting:Mounting M1
+U 1 1 6002CE00
+P 10775 550
+F 0 "M1" H 10775 650 50  0001 C CNN
+F 1 "Mounting" H 10775 475 50  0001 C CNN
+F 2 "mounting:M3_pin" H 10775 550 50  0001 C CNN
+F 3 "~" H 10775 550 50  0001 C CNN
+	1    10775 550 
+	1    0    0    -1  
+$EndComp
+$Sheet
+S 1075 6450 1525 1050
+U 643F8439
+F0 "Power" 50
+F1 "Power.sch" 50
+$EndSheet
+$Comp
+L led_socket:LED_Socket U2
+U 1 1 64448F51
+P 7550 3625
+F 0 "U2" H 8380 3646 50  0000 L CNN
+F 1 "Test Socket" H 8380 3555 50  0000 L CNN
+F 2 "Socket:DIP_Socket-16_W4.3_W5.08_W7.62_W10.16_W10.9_3M_216-3340-00-0602J" H 7550 2325 50  0001 C CNN
+F 3 "" H 6900 3275 50  0001 C CNN
+	1    7550 3625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 4100 7050 4175
+Wire Wire Line
+	7050 4175 7450 4175
+Wire Wire Line
+	7450 4100 7450 4175
+Connection ~ 7450 4175
+Wire Wire Line
+	7450 4175 7850 4175
+Wire Wire Line
+	7850 4100 7850 4175
+Wire Wire Line
+	6600 4175 6600 4250
+$Comp
+L power:GND #PWR09
+U 1 1 64462CBF
+P 6600 4250
+F 0 "#PWR09" H 6600 4000 50  0001 C CNN
+F 1 "GND" H 6605 4077 50  0000 C CNN
+F 2 "" H 6600 4250 50  0001 C CNN
+F 3 "" H 6600 4250 50  0001 C CNN
+	1    6600 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR010
+U 1 1 644648B1
+P 7850 3125
+F 0 "#PWR010" H 7850 2975 50  0001 C CNN
+F 1 "VCC" H 7865 3298 50  0000 C CNN
+F 2 "" H 7850 3125 50  0001 C CNN
+F 3 "" H 7850 3125 50  0001 C CNN
+	1    7850 3125
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 3125 7850 3200
+Wire Wire Line
+	7050 3200 7050 3125
+Wire Wire Line
+	7050 3125 6600 3125
+Wire Wire Line
+	6600 4175 7050 4175
+Wire Wire Line
+	6600 3125 6600 4175
+Connection ~ 7050 4175
+Connection ~ 6600 4175
+$Comp
+L Device:R R5
+U 1 1 6446C5D0
+P 4475 1625
+F 0 "R5" V 4425 1300 50  0000 L CNN
+F 1 "100" V 4475 1625 50  0000 C CNN
+F 2 "" V 4405 1625 50  0001 C CNN
+F 3 "~" H 4475 1625 50  0001 C CNN
+	1    4475 1625
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R6
+U 1 1 6446DA50
+P 4475 1725
+F 0 "R6" V 4425 1400 50  0000 L CNN
+F 1 "220" V 4475 1725 50  0000 C CNN
+F 2 "" V 4405 1725 50  0001 C CNN
+F 3 "~" H 4475 1725 50  0001 C CNN
+	1    4475 1725
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 6446DE4D
+P 4475 1825
+F 0 "R7" V 4425 1500 50  0000 L CNN
+F 1 "330" V 4475 1825 50  0000 C CNN
+F 2 "" V 4405 1825 50  0001 C CNN
+F 3 "~" H 4475 1825 50  0001 C CNN
+	1    4475 1825
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 6446E20B
+P 4475 1925
+F 0 "R8" V 4425 1600 50  0000 L CNN
+F 1 "470" V 4475 1925 50  0000 C CNN
+F 2 "" V 4405 1925 50  0001 C CNN
+F 3 "~" H 4475 1925 50  0001 C CNN
+	1    4475 1925
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 6446E55E
+P 4475 2025
+F 0 "R9" V 4425 1700 50  0000 L CNN
+F 1 "680" V 4475 2025 50  0000 C CNN
+F 2 "" V 4405 2025 50  0001 C CNN
+F 3 "~" H 4475 2025 50  0001 C CNN
+	1    4475 2025
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 6446E892
+P 4475 2125
+F 0 "R10" V 4425 1800 50  0000 L CNN
+F 1 "1k" V 4475 2125 50  0000 C CNN
+F 2 "" V 4405 2125 50  0001 C CNN
+F 3 "~" H 4475 2125 50  0001 C CNN
+	1    4475 2125
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 6446ED4A
+P 4475 2225
+F 0 "R11" V 4425 1900 50  0000 L CNN
+F 1 "2k2" V 4475 2225 50  0000 C CNN
+F 2 "" V 4405 2225 50  0001 C CNN
+F 3 "~" H 4475 2225 50  0001 C CNN
+	1    4475 2225
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 6446F0B2
+P 4475 2325
+F 0 "R12" V 4425 2000 50  0000 L CNN
+F 1 "3k3" V 4475 2325 50  0000 C CNN
+F 2 "" V 4405 2325 50  0001 C CNN
+F 3 "~" H 4475 2325 50  0001 C CNN
+	1    4475 2325
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x08_Odd_Even J4
+U 1 1 6447067E
+P 3825 1925
+F 0 "J4" H 3875 2325 50  0000 C CNN
+F 1 "R_SEL" H 3875 1425 50  0000 C CNN
+F 2 "" H 3825 1925 50  0001 C CNN
+F 3 "~" H 3825 1925 50  0001 C CNN
+	1    3825 1925
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4125 1625 4325 1625
+Wire Wire Line
+	4125 1725 4325 1725
+Wire Wire Line
+	4125 1825 4325 1825
+Wire Wire Line
+	4125 1925 4325 1925
+Wire Wire Line
+	4125 2025 4325 2025
+Wire Wire Line
+	4125 2125 4325 2125
+Wire Wire Line
+	4125 2225 4325 2225
+Wire Wire Line
+	4125 2325 4325 2325
+Wire Wire Line
+	3625 2325 3550 2325
+Wire Wire Line
+	3550 2325 3550 2225
+Wire Wire Line
+	3625 1625 3550 1625
+Wire Wire Line
+	3625 1725 3550 1725
+Connection ~ 3550 1725
+Wire Wire Line
+	3550 1725 3550 1625
+Wire Wire Line
+	3625 1825 3550 1825
+Connection ~ 3550 1825
+Wire Wire Line
+	3550 1825 3550 1725
+Wire Wire Line
+	3625 1925 3550 1925
+Connection ~ 3550 1925
+Wire Wire Line
+	3550 1925 3550 1825
+Wire Wire Line
+	3625 2025 3550 2025
+Connection ~ 3550 2025
+Wire Wire Line
+	3550 2025 3550 1925
+Wire Wire Line
+	3625 2125 3550 2125
+Connection ~ 3550 2125
+Wire Wire Line
+	3550 2125 3550 2025
+Wire Wire Line
+	3625 2225 3550 2225
+Connection ~ 3550 2225
+Wire Wire Line
+	3550 2225 3550 2125
+Wire Wire Line
+	4625 1625 4725 1625
+Wire Wire Line
+	4625 1725 4725 1725
+Wire Wire Line
+	4625 1825 4725 1825
+Wire Wire Line
+	4625 1925 4725 1925
+Wire Wire Line
+	4625 2025 4725 2025
+Wire Wire Line
+	4625 2125 4725 2125
+Wire Wire Line
+	4625 2225 4725 2225
+Wire Wire Line
+	4625 2325 4725 2325
+Wire Wire Line
+	4725 1625 4725 1725
+Wire Wire Line
+	4725 1725 4725 1825
+Connection ~ 4725 1725
+Wire Wire Line
+	4725 1825 4725 1925
+Connection ~ 4725 1825
+Connection ~ 4725 1925
+Wire Wire Line
+	4725 2025 4725 2125
+Connection ~ 4725 2025
+Wire Wire Line
+	4725 2125 4725 2225
+Connection ~ 4725 2125
+Wire Wire Line
+	4725 2225 4725 2325
+Connection ~ 4725 2225
+$Comp
+L solder_select:Jumper_3_Bridged12 JP1
+U 1 1 64496F5F
+P 3550 1325
+F 0 "JP1" H 3550 1529 50  0000 C CNN
+F 1 "R_POL" H 3550 1438 50  0000 C CNN
+F 2 "" H 3550 1325 50  0001 C CNN
+F 3 "~" H 3550 1325 50  0001 C CNN
+	1    3550 1325
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 1325 3875 1325
+Wire Wire Line
+	3875 1325 3875 1250
+$Comp
+L power:VCC #PWR011
+U 1 1 6449FB95
+P 3875 1250
+F 0 "#PWR011" H 3875 1100 50  0001 C CNN
+F 1 "VCC" H 3890 1423 50  0000 C CNN
+F 2 "" H 3875 1250 50  0001 C CNN
+F 3 "" H 3875 1250 50  0001 C CNN
+	1    3875 1250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1325 3225 1325
+Wire Wire Line
+	3225 1325 3225 1400
+$Comp
+L power:GND #PWR012
+U 1 1 644A48E7
+P 3225 1400
+F 0 "#PWR012" H 3225 1150 50  0001 C CNN
+F 1 "GND" H 3230 1227 50  0000 C CNN
+F 2 "" H 3225 1400 50  0001 C CNN
+F 3 "" H 3225 1400 50  0001 C CNN
+	1    3225 1400
+	-1   0    0    -1  
+$EndComp
+Text GLabel 5125 1625 2    50   Output ~ 0
+R_OUT
+Wire Wire Line
+	4725 1925 4725 2025
+Text GLabel 6850 4250 3    50   Input ~ 0
+R_OUT
+Wire Wire Line
+	6850 4250 6850 4100
+Text GLabel 6850 3050 1    50   Input ~ 0
+R_OUT
+Wire Wire Line
+	6850 3050 6850 3200
+Text GLabel 7650 3050 1    50   Input ~ 0
+R_OUT
+Wire Wire Line
+	7650 3050 7650 3200
+Wire Wire Line
+	3550 1475 3550 1625
+Connection ~ 3550 1625
+$Comp
+L Device:Jumper_NC_Small JP2
+U 1 1 644DEF75
+P 4925 1625
+F 0 "JP2" H 4925 1837 50  0000 C CNN
+F 1 "R_EN" H 4925 1746 50  0000 C CNN
+F 2 "" H 4925 1625 50  0001 C CNN
+F 3 "~" H 4925 1625 50  0001 C CNN
+	1    4925 1625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4725 1625 4825 1625
+Connection ~ 4725 1625
+Wire Wire Line
+	5025 1625 5125 1625
+Wire Wire Line
+	4800 2325 4725 2325
+$Comp
+L Connector:TestPoint TP?
+U 1 1 64508E68
+P 3400 2325
+AR Path="/643F8439/64508E68" Ref="TP?"  Part="1" 
+AR Path="/64508E68" Ref="TP3"  Part="1" 
+F 0 "TP3" V 3575 2450 50  0000 C CNN
+F 1 "TP_R_A" V 3500 2450 50  0000 C CNN
+F 2 "" H 3600 2325 50  0001 C CNN
+F 3 "~" H 3600 2325 50  0001 C CNN
+	1    3400 2325
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3400 2325 3550 2325
+$Comp
+L Connector:TestPoint TP?
+U 1 1 64512FF9
+P 4800 2325
+AR Path="/643F8439/64512FF9" Ref="TP?"  Part="1" 
+AR Path="/64512FF9" Ref="TP4"  Part="1" 
+F 0 "TP4" V 4975 2450 50  0000 C CNN
+F 1 "TP_R_B" V 4900 2450 50  0000 C CNN
+F 2 "" H 5000 2325 50  0001 C CNN
+F 3 "~" H 5000 2325 50  0001 C CNN
+	1    4800 2325
+	0    1    -1   0   
+$EndComp
+Connection ~ 3550 2325
+Connection ~ 4725 2325
+$Comp
+L Device:R R13
+U 1 1 6452D4E1
+P 4475 3325
+F 0 "R13" V 4425 3000 50  0000 L CNN
+F 1 "100" V 4475 3325 50  0000 C CNN
+F 2 "" V 4405 3325 50  0001 C CNN
+F 3 "~" H 4475 3325 50  0001 C CNN
+	1    4475 3325
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R14
+U 1 1 6452D4E7
+P 4475 3425
+F 0 "R14" V 4425 3100 50  0000 L CNN
+F 1 "220" V 4475 3425 50  0000 C CNN
+F 2 "" V 4405 3425 50  0001 C CNN
+F 3 "~" H 4475 3425 50  0001 C CNN
+	1    4475 3425
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R15
+U 1 1 6452D4ED
+P 4475 3525
+F 0 "R15" V 4425 3200 50  0000 L CNN
+F 1 "330" V 4475 3525 50  0000 C CNN
+F 2 "" V 4405 3525 50  0001 C CNN
+F 3 "~" H 4475 3525 50  0001 C CNN
+	1    4475 3525
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 6452D4F3
+P 4475 3625
+F 0 "R16" V 4425 3300 50  0000 L CNN
+F 1 "470" V 4475 3625 50  0000 C CNN
+F 2 "" V 4405 3625 50  0001 C CNN
+F 3 "~" H 4475 3625 50  0001 C CNN
+	1    4475 3625
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R17
+U 1 1 6452D4F9
+P 4475 3725
+F 0 "R17" V 4425 3400 50  0000 L CNN
+F 1 "680" V 4475 3725 50  0000 C CNN
+F 2 "" V 4405 3725 50  0001 C CNN
+F 3 "~" H 4475 3725 50  0001 C CNN
+	1    4475 3725
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R18
+U 1 1 6452D4FF
+P 4475 3825
+F 0 "R18" V 4425 3500 50  0000 L CNN
+F 1 "1k" V 4475 3825 50  0000 C CNN
+F 2 "" V 4405 3825 50  0001 C CNN
+F 3 "~" H 4475 3825 50  0001 C CNN
+	1    4475 3825
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R19
+U 1 1 6452D505
+P 4475 3925
+F 0 "R19" V 4425 3600 50  0000 L CNN
+F 1 "2k2" V 4475 3925 50  0000 C CNN
+F 2 "" V 4405 3925 50  0001 C CNN
+F 3 "~" H 4475 3925 50  0001 C CNN
+	1    4475 3925
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R20
+U 1 1 6452D50B
+P 4475 4025
+F 0 "R20" V 4425 3700 50  0000 L CNN
+F 1 "3k3" V 4475 4025 50  0000 C CNN
+F 2 "" V 4405 4025 50  0001 C CNN
+F 3 "~" H 4475 4025 50  0001 C CNN
+	1    4475 4025
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x08_Odd_Even J5
+U 1 1 6452D511
+P 3825 3625
+F 0 "J5" H 3875 4025 50  0000 C CNN
+F 1 "R_SEL" H 3875 3125 50  0000 C CNN
+F 2 "" H 3825 3625 50  0001 C CNN
+F 3 "~" H 3825 3625 50  0001 C CNN
+	1    3825 3625
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4125 3325 4325 3325
+Wire Wire Line
+	4125 3425 4325 3425
+Wire Wire Line
+	4125 3525 4325 3525
+Wire Wire Line
+	4125 3625 4325 3625
+Wire Wire Line
+	4125 3725 4325 3725
+Wire Wire Line
+	4125 3825 4325 3825
+Wire Wire Line
+	4125 3925 4325 3925
+Wire Wire Line
+	4125 4025 4325 4025
+Wire Wire Line
+	3625 4025 3550 4025
+Wire Wire Line
+	3550 4025 3550 3925
+Wire Wire Line
+	3625 3325 3550 3325
+Wire Wire Line
+	3625 3425 3550 3425
+Connection ~ 3550 3425
+Wire Wire Line
+	3550 3425 3550 3325
+Wire Wire Line
+	3625 3525 3550 3525
+Connection ~ 3550 3525
+Wire Wire Line
+	3550 3525 3550 3425
+Wire Wire Line
+	3625 3625 3550 3625
+Connection ~ 3550 3625
+Wire Wire Line
+	3550 3625 3550 3525
+Wire Wire Line
+	3625 3725 3550 3725
+Connection ~ 3550 3725
+Wire Wire Line
+	3550 3725 3550 3625
+Wire Wire Line
+	3625 3825 3550 3825
+Connection ~ 3550 3825
+Wire Wire Line
+	3550 3825 3550 3725
+Wire Wire Line
+	3625 3925 3550 3925
+Connection ~ 3550 3925
+Wire Wire Line
+	3550 3925 3550 3825
+Wire Wire Line
+	4625 3325 4725 3325
+Wire Wire Line
+	4625 3425 4725 3425
+Wire Wire Line
+	4625 3525 4725 3525
+Wire Wire Line
+	4625 3625 4725 3625
+Wire Wire Line
+	4625 3725 4725 3725
+Wire Wire Line
+	4625 3825 4725 3825
+Wire Wire Line
+	4625 3925 4725 3925
+Wire Wire Line
+	4625 4025 4725 4025
+Wire Wire Line
+	4725 3325 4725 3425
+Wire Wire Line
+	4725 3425 4725 3525
+Connection ~ 4725 3425
+Wire Wire Line
+	4725 3525 4725 3625
+Connection ~ 4725 3525
+Connection ~ 4725 3625
+Wire Wire Line
+	4725 3725 4725 3825
+Connection ~ 4725 3725
+Wire Wire Line
+	4725 3825 4725 3925
+Connection ~ 4725 3825
+Wire Wire Line
+	4725 3925 4725 4025
+Connection ~ 4725 3925
+$Comp
+L solder_select:Jumper_3_Bridged12 JP3
+U 1 1 6452D548
+P 3550 3025
+F 0 "JP3" H 3550 3229 50  0000 C CNN
+F 1 "G_POL" H 3550 3138 50  0000 C CNN
+F 2 "" H 3550 3025 50  0001 C CNN
+F 3 "~" H 3550 3025 50  0001 C CNN
+	1    3550 3025
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3025 3875 3025
+Wire Wire Line
+	3875 3025 3875 2950
+$Comp
+L power:VCC #PWR0101
+U 1 1 6452D550
+P 3875 2950
+F 0 "#PWR0101" H 3875 2800 50  0001 C CNN
+F 1 "VCC" H 3890 3123 50  0000 C CNN
+F 2 "" H 3875 2950 50  0001 C CNN
+F 3 "" H 3875 2950 50  0001 C CNN
+	1    3875 2950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 3025 3225 3025
+Wire Wire Line
+	3225 3025 3225 3100
+$Comp
+L power:GND #PWR0102
+U 1 1 6452D558
+P 3225 3100
+F 0 "#PWR0102" H 3225 2850 50  0001 C CNN
+F 1 "GND" H 3230 2927 50  0000 C CNN
+F 2 "" H 3225 3100 50  0001 C CNN
+F 3 "" H 3225 3100 50  0001 C CNN
+	1    3225 3100
+	-1   0    0    -1  
+$EndComp
+Text GLabel 5125 3325 2    50   Output ~ 0
+G_OUT
+Wire Wire Line
+	4725 3625 4725 3725
+Wire Wire Line
+	3550 3175 3550 3325
+Connection ~ 3550 3325
+$Comp
+L Device:Jumper_NC_Small JP5
+U 1 1 6452D562
+P 4925 3325
+F 0 "JP5" H 4925 3537 50  0000 C CNN
+F 1 "G_EN" H 4925 3446 50  0000 C CNN
+F 2 "" H 4925 3325 50  0001 C CNN
+F 3 "~" H 4925 3325 50  0001 C CNN
+	1    4925 3325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4725 3325 4825 3325
+Connection ~ 4725 3325
+Wire Wire Line
+	5025 3325 5125 3325
+Wire Wire Line
+	4800 4025 4725 4025
+$Comp
+L Connector:TestPoint TP?
+U 1 1 6452D56C
+P 3400 4025
+AR Path="/643F8439/6452D56C" Ref="TP?"  Part="1" 
+AR Path="/6452D56C" Ref="TP5"  Part="1" 
+F 0 "TP5" V 3575 4150 50  0000 C CNN
+F 1 "TP_G_A" V 3500 4150 50  0000 C CNN
+F 2 "" H 3600 4025 50  0001 C CNN
+F 3 "~" H 3600 4025 50  0001 C CNN
+	1    3400 4025
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3400 4025 3550 4025
+$Comp
+L Connector:TestPoint TP?
+U 1 1 6452D573
+P 4800 4025
+AR Path="/643F8439/6452D573" Ref="TP?"  Part="1" 
+AR Path="/6452D573" Ref="TP7"  Part="1" 
+F 0 "TP7" V 4975 4150 50  0000 C CNN
+F 1 "TP_G_B" V 4900 4150 50  0000 C CNN
+F 2 "" H 5000 4025 50  0001 C CNN
+F 3 "~" H 5000 4025 50  0001 C CNN
+	1    4800 4025
+	0    1    -1   0   
+$EndComp
+Connection ~ 3550 4025
+Connection ~ 4725 4025
+$Comp
+L Device:R R21
+U 1 1 64543C3F
+P 4475 5025
+F 0 "R21" V 4425 4700 50  0000 L CNN
+F 1 "100" V 4475 5025 50  0000 C CNN
+F 2 "" V 4405 5025 50  0001 C CNN
+F 3 "~" H 4475 5025 50  0001 C CNN
+	1    4475 5025
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R22
+U 1 1 64543C45
+P 4475 5125
+F 0 "R22" V 4425 4800 50  0000 L CNN
+F 1 "220" V 4475 5125 50  0000 C CNN
+F 2 "" V 4405 5125 50  0001 C CNN
+F 3 "~" H 4475 5125 50  0001 C CNN
+	1    4475 5125
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R23
+U 1 1 64543C4B
+P 4475 5225
+F 0 "R23" V 4425 4900 50  0000 L CNN
+F 1 "330" V 4475 5225 50  0000 C CNN
+F 2 "" V 4405 5225 50  0001 C CNN
+F 3 "~" H 4475 5225 50  0001 C CNN
+	1    4475 5225
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R24
+U 1 1 64543C51
+P 4475 5325
+F 0 "R24" V 4425 5000 50  0000 L CNN
+F 1 "470" V 4475 5325 50  0000 C CNN
+F 2 "" V 4405 5325 50  0001 C CNN
+F 3 "~" H 4475 5325 50  0001 C CNN
+	1    4475 5325
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R25
+U 1 1 64543C57
+P 4475 5425
+F 0 "R25" V 4425 5100 50  0000 L CNN
+F 1 "680" V 4475 5425 50  0000 C CNN
+F 2 "" V 4405 5425 50  0001 C CNN
+F 3 "~" H 4475 5425 50  0001 C CNN
+	1    4475 5425
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R26
+U 1 1 64543C5D
+P 4475 5525
+F 0 "R26" V 4425 5200 50  0000 L CNN
+F 1 "1k" V 4475 5525 50  0000 C CNN
+F 2 "" V 4405 5525 50  0001 C CNN
+F 3 "~" H 4475 5525 50  0001 C CNN
+	1    4475 5525
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R27
+U 1 1 64543C63
+P 4475 5625
+F 0 "R27" V 4425 5300 50  0000 L CNN
+F 1 "2k2" V 4475 5625 50  0000 C CNN
+F 2 "" V 4405 5625 50  0001 C CNN
+F 3 "~" H 4475 5625 50  0001 C CNN
+	1    4475 5625
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R28
+U 1 1 64543C69
+P 4475 5725
+F 0 "R28" V 4425 5400 50  0000 L CNN
+F 1 "3k3" V 4475 5725 50  0000 C CNN
+F 2 "" V 4405 5725 50  0001 C CNN
+F 3 "~" H 4475 5725 50  0001 C CNN
+	1    4475 5725
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x08_Odd_Even J6
+U 1 1 64543C6F
+P 3825 5325
+F 0 "J6" H 3875 5725 50  0000 C CNN
+F 1 "B_SEL" H 3875 4825 50  0000 C CNN
+F 2 "" H 3825 5325 50  0001 C CNN
+F 3 "~" H 3825 5325 50  0001 C CNN
+	1    3825 5325
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4125 5025 4325 5025
+Wire Wire Line
+	4125 5125 4325 5125
+Wire Wire Line
+	4125 5225 4325 5225
+Wire Wire Line
+	4125 5325 4325 5325
+Wire Wire Line
+	4125 5425 4325 5425
+Wire Wire Line
+	4125 5525 4325 5525
+Wire Wire Line
+	4125 5625 4325 5625
+Wire Wire Line
+	4125 5725 4325 5725
+Wire Wire Line
+	3625 5725 3550 5725
+Wire Wire Line
+	3550 5725 3550 5625
+Wire Wire Line
+	3625 5025 3550 5025
+Wire Wire Line
+	3625 5125 3550 5125
+Connection ~ 3550 5125
+Wire Wire Line
+	3550 5125 3550 5025
+Wire Wire Line
+	3625 5225 3550 5225
+Connection ~ 3550 5225
+Wire Wire Line
+	3550 5225 3550 5125
+Wire Wire Line
+	3625 5325 3550 5325
+Connection ~ 3550 5325
+Wire Wire Line
+	3550 5325 3550 5225
+Wire Wire Line
+	3625 5425 3550 5425
+Connection ~ 3550 5425
+Wire Wire Line
+	3550 5425 3550 5325
+Wire Wire Line
+	3625 5525 3550 5525
+Connection ~ 3550 5525
+Wire Wire Line
+	3550 5525 3550 5425
+Wire Wire Line
+	3625 5625 3550 5625
+Connection ~ 3550 5625
+Wire Wire Line
+	3550 5625 3550 5525
+Wire Wire Line
+	4625 5025 4725 5025
+Wire Wire Line
+	4625 5125 4725 5125
+Wire Wire Line
+	4625 5225 4725 5225
+Wire Wire Line
+	4625 5325 4725 5325
+Wire Wire Line
+	4625 5425 4725 5425
+Wire Wire Line
+	4625 5525 4725 5525
+Wire Wire Line
+	4625 5625 4725 5625
+Wire Wire Line
+	4625 5725 4725 5725
+Wire Wire Line
+	4725 5025 4725 5125
+Wire Wire Line
+	4725 5125 4725 5225
+Connection ~ 4725 5125
+Wire Wire Line
+	4725 5225 4725 5325
+Connection ~ 4725 5225
+Connection ~ 4725 5325
+Wire Wire Line
+	4725 5425 4725 5525
+Connection ~ 4725 5425
+Wire Wire Line
+	4725 5525 4725 5625
+Connection ~ 4725 5525
+Wire Wire Line
+	4725 5625 4725 5725
+Connection ~ 4725 5625
+$Comp
+L solder_select:Jumper_3_Bridged12 JP4
+U 1 1 64543CA6
+P 3550 4725
+F 0 "JP4" H 3550 4929 50  0000 C CNN
+F 1 "B_POL" H 3550 4838 50  0000 C CNN
+F 2 "" H 3550 4725 50  0001 C CNN
+F 3 "~" H 3550 4725 50  0001 C CNN
+	1    3550 4725
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 4725 3875 4725
+Wire Wire Line
+	3875 4725 3875 4650
+$Comp
+L power:VCC #PWR0103
+U 1 1 64543CAE
+P 3875 4650
+F 0 "#PWR0103" H 3875 4500 50  0001 C CNN
+F 1 "VCC" H 3890 4823 50  0000 C CNN
+F 2 "" H 3875 4650 50  0001 C CNN
+F 3 "" H 3875 4650 50  0001 C CNN
+	1    3875 4650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 4725 3225 4725
+Wire Wire Line
+	3225 4725 3225 4800
+$Comp
+L power:GND #PWR0104
+U 1 1 64543CB6
+P 3225 4800
+F 0 "#PWR0104" H 3225 4550 50  0001 C CNN
+F 1 "GND" H 3230 4627 50  0000 C CNN
+F 2 "" H 3225 4800 50  0001 C CNN
+F 3 "" H 3225 4800 50  0001 C CNN
+	1    3225 4800
+	-1   0    0    -1  
+$EndComp
+Text GLabel 5125 5025 2    50   Output ~ 0
+B_OUT
+Wire Wire Line
+	4725 5325 4725 5425
+Wire Wire Line
+	3550 4875 3550 5025
+Connection ~ 3550 5025
+$Comp
+L Device:Jumper_NC_Small JP6
+U 1 1 64543CC0
+P 4925 5025
+F 0 "JP6" H 4925 5237 50  0000 C CNN
+F 1 "B_EN" H 4925 5146 50  0000 C CNN
+F 2 "" H 4925 5025 50  0001 C CNN
+F 3 "~" H 4925 5025 50  0001 C CNN
+	1    4925 5025
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4725 5025 4825 5025
+Connection ~ 4725 5025
+Wire Wire Line
+	5025 5025 5125 5025
+Wire Wire Line
+	4800 5725 4725 5725
+$Comp
+L Connector:TestPoint TP?
+U 1 1 64543CCA
+P 3400 5725
+AR Path="/643F8439/64543CCA" Ref="TP?"  Part="1" 
+AR Path="/64543CCA" Ref="TP6"  Part="1" 
+F 0 "TP6" V 3575 5850 50  0000 C CNN
+F 1 "TP_B_A" V 3500 5850 50  0000 C CNN
+F 2 "" H 3600 5725 50  0001 C CNN
+F 3 "~" H 3600 5725 50  0001 C CNN
+	1    3400 5725
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3400 5725 3550 5725
+$Comp
+L Connector:TestPoint TP?
+U 1 1 64543CD1
+P 4800 5725
+AR Path="/643F8439/64543CD1" Ref="TP?"  Part="1" 
+AR Path="/64543CD1" Ref="TP8"  Part="1" 
+F 0 "TP8" V 4975 5850 50  0000 C CNN
+F 1 "TP_B_B" V 4900 5850 50  0000 C CNN
+F 2 "" H 5000 5725 50  0001 C CNN
+F 3 "~" H 5000 5725 50  0001 C CNN
+	1    4800 5725
+	0    1    -1   0   
+$EndComp
+Connection ~ 3550 5725
+Connection ~ 4725 5725
+Text GLabel 7250 3050 1    50   Input ~ 0
+G_OUT
+Wire Wire Line
+	7250 3050 7250 3200
+Text GLabel 8050 3050 1    50   Input ~ 0
+G_OUT
+Wire Wire Line
+	8050 3050 8050 3200
+Text GLabel 7250 4250 3    50   Input ~ 0
+G_OUT
+Text GLabel 7650 4250 3    50   Input ~ 0
+B_OUT
+Wire Wire Line
+	7650 4250 7650 4100
+Wire Wire Line
+	7250 4100 7250 4250
+Text GLabel 7450 3025 1    50   Input ~ 0
+B_OUT
+Text GLabel 8250 3025 1    50   Input ~ 0
+B_OUT
+Wire Wire Line
+	8250 3025 8250 3200
+Wire Wire Line
+	7450 3025 7450 3200
+$EndSCHEMATC
