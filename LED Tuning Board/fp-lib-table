@@ -1,7 +1,9 @@
 (fp_lib_table
-  (lib (name RND)(type KiCad)(uri $KIPRJMOD/../common/modules/RND_DSUB.pretty)(options "")(descr ""))
-  (lib (name IDC_Joystick)(type KiCad)(uri $KIPRJMOD/../common/modules/IDC_Joystick.pretty)(options "")(descr ""))
+  (lib (name resistor)(type KiCad)(uri $KIPRJMOD/../common/modules/resistor.pretty)(options "")(descr ""))
   (lib (name mounting)(type KiCad)(uri $KIPRJMOD/../common/modules/mounting.pretty)(options "")(descr ""))
   (lib (name solder_bridge)(type KiCad)(uri $KIPRJMOD/../common/modules/solder_bridge.pretty)(options "")(descr ""))
-  (lib (name switch_cutout)(type KiCad)(uri $KIPRJMOD/../common/modules/switch_cutout.pretty)(options "")(descr ""))
+  (lib (name power)(type KiCad)(uri $KIPRJMOD/../common/modules/power.pretty)(options "")(descr ""))
+  (lib (name testpoint)(type KiCad)(uri $KIPRJMOD/../common/modules/testpoint.pretty)(options "")(descr ""))
+  (lib (name artwork)(type KiCad)(uri $KIPRJMOD/../common/modules/artwork.pretty)(options "")(descr ""))
+  (lib (name fuse_holder)(type KiCad)(uri $KIPRJMOD/../common/modules/fuse_holder.pretty)(options "")(descr ""))
 )
