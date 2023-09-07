@@ -303,8 +303,8 @@ Wire Wire Line
 	5175 2725 5175 3100
 Connection ~ 5175 2725
 Connection ~ 6675 3100
-Text Notes 6575 4025 0    50   ~ 0
-* Values need to be adjusted as needed, or\njust skip the regulation altogether by using\nwhatever is connected straight to the\nDC-jack. See LM317 calculator for hints.
+Text Notes 6825 4200 0    50   ~ 0
+* Values need to be adjusted as needed, or\njust skip the regulation altogether by using\nwhatever is connected straight to the\nDC-jack.\n\nSee LM317 calculator for hints.\nhttp://www.reuk.co.uk/wordpress/electric-circuit/lm317-voltage-calculator/
 $Comp
 L Diode:1N5819 D?
 U 1 1 6440E5AB
@@ -383,14 +383,14 @@ Wire Wire Line
 Wire Wire Line
 	7200 2825 7275 2825
 Text Label 6875 3100 0    50   ~ 0
-VADJ
+V_OUT
 $Comp
 L Connector:TestPoint TP1
 U 1 1 64428875
 P 8000 2825
 F 0 "TP1" V 7954 3013 50  0000 L CNN
 F 1 "TP_VCC" V 8045 3013 50  0000 L CNN
-F 2 "testpoint:TestPoint" H 8200 2825 50  0001 C CNN
+F 2 "testpoint:TestPoint_Large" H 8200 2825 50  0001 C CNN
 F 3 "~" H 8200 2825 50  0001 C CNN
 	1    8000 2825
 	0    1    1    0   
@@ -416,7 +416,7 @@ U 1 1 6443C667
 P 8000 3025
 F 0 "TP2" V 7954 3213 50  0000 L CNN
 F 1 "TP_GND" V 8045 3213 50  0000 L CNN
-F 2 "testpoint:TestPoint" H 8200 3025 50  0001 C CNN
+F 2 "testpoint:TestPoint_Large" H 8200 3025 50  0001 C CNN
 F 3 "~" H 8200 3025 50  0001 C CNN
 	1    8000 3025
 	0    1    1    0   
@@ -439,4 +439,6 @@ F 3 "~" H 4475 2725 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4300 2725 4375 2725
+Text Notes 6825 4725 0    50   ~ 0
+- LD1117AV33 can be used instead for a 5v to 3.3v regulation,\nin that case you would skip installation of R1-R4, J3 and\nincrease C2 to 10uF. Pin 1 of LM317 need to be\nconnected to a GND (bridge R2, J3 pins 1-2).
 $EndSCHEMATC
