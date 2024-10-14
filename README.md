@@ -89,9 +89,9 @@ Most parts should be easy to get a hold of from your favorite local electronic c
 
 Note that some pin references will have a note attached to it, these are found below the table. In particular these are relevant for duplicated references, one for each of the two regulator options described in the documentation (you will only need one set).
 
-| Reference     | Item                                                | Count |
-| ------------- | --------------------------------------------------- | ----- |
-| PCB           | Fabricate using Gerber files                        |     1 |
+| Reference     | Item                                                | Count | Order     |
+| ------------- | --------------------------------------------------- | ----- | --------- |
+| PCB           | Fabricate using Gerber files                        |     1 | [PCBWay](https://www.pcbway.com/project/shareproject/LED_Tuning_Board_fdd33131.html)
 | C1            | 100nF capacitor (5mm pin spacing)                   |     1 |
 | C2 *1         | 1uF electrolytic capacitor (2mm pin spacing)        |     1 |
 | C2 *2         | 10uF electrolytic capacitor (2mm pin spacing)       |     1 |
