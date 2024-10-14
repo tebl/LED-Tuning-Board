@@ -14,6 +14,7 @@ At some point I wanted to do a whole video on the topic of the *LED Tuning Board
 
 Truly exciting stuff! And on that note, I also put a commonly available fuse on the board - for when things become slightly too exciting. 
 
+
 # 1> Building the board
 Soldering together the few components should be easy going as long as you have access to a reasonable set of tools, personally I'm using a cheap soldering station with adjustable temperature so there's no need really no need to offer up your hard-earned cash to the old Norse god, Hakko. Hakko is actually a well-known brand, not a Norse god as previously stated. I meant that as a joke, so please don't send me brand new Hakko gear as punishment (I would just end up using it). Go expensive if you want to, not because that one guy on the Internet told you to. Personally I prefer using 60/40 soldering tin, mostly as the lead-free stuff makes the job a lot harder when you're just getting into the hobby of soldering things together.
 
@@ -31,6 +32,7 @@ As for the remainder of the installation, I went in the direction of building a 
 
 Before doing all that, I did add a 1N5819 Schottky diode - that's there to keep things from exploding if you were to plug in a power supply with the incorrect polarity. For that you also need to ensure that you actually install it the right way, meaning that the little silver stripe should match up with the white stripe on the board.
 
+
 ## 1.1> 3.3v fixed regulator
 My choice of the *LD1117AV33*, a 3.3v regulator, was based on the thorough research of finding one in my parts-bin then throwing it in there. As they're not entirely the same, we'll need to make a few small adjustments when attempting to use it.
 
@@ -41,12 +43,14 @@ The first change is that C2 should have a greater value than the one printed, go
 
 :grey_question: The LD1117A-series of volage regulators have a wide range of output voltages available, I've simply picked 3.3v as with a 5v power input I end up with the two I need. If you want something else, there's also the *LD1117AV50* in case you explicitly wanted one that has 5v on the output.
 
+
 ## 1.2>  Variable voltage regulator
 The *LM317* voltage regulator is the one I had in mind when building this version of the PCB, its main selling point is that we can easily generate several other voltages based on the choice of resistors installed on the board. With a common resistor (R1) as its base, we will get different selectable output voltages (V1/V2/V3) depending on the value of resistors R2, R3 and R4 - one for each of the generated outputs. One has been filled in for you along with a set base, that's R1 at 240 Ohm and R2 at 390 Ohm for a V1 = 3.28v.
 
 ![LM317 Output Table](https://raw.githubusercontent.com/tebl/LED-Tuning-Board/refs/heads/main/gallery/lm317_table.png)
 
 That sounds like a lot of math that we need to do, but if you're going by the one suggested - we've already chosen a base resistor value (R1 = 240 Ohm). Basically we just need to pick whatever we want for R3/R4 by going up or down on the table, just know that we won't be able to generate a higher voltage than what we sufficiently provide it with. If you want to understand how exactly it works, either consult the datasheet included or you can go to the source of the table at [reuk.co.uk](http://www.reuk.co.uk/wordpress/electric-circuit/lm317-voltage-calculator/) for all of the relevant mathematical questions.
+
 
 ## 1.3> Moving on
 With all of the neat details on the choice of voltage regulators taken care of, hopefully explained sufficiently that you know what was going on the whole time. As for the pictures we've been covering the installation of a fixed regulator, so when moving forwards we need to keep in mind that J3 will not be needed. You will, however, need it if you went with the variable option. 
@@ -70,6 +74,11 @@ With that we've just added our selection of jumper caps so that'd we have someth
 
 Congratulations! You've just managed to make it through to the end, a whole thing just to pick a single resistor value to use for your project (or one of mine).
 
+
+## 1.4> For extra credit
+For extra credit, you can also solder one of the cheaply available voltage display modules to the relevant test-points. That way you won't even need to dust off your multimeter when making sure that the voltage has been set correctly, especially when you're using the adjustable voltage regulator. Fix to the board using double-sided tape, wherever you think it'll fit. Here's where I put mine:
+
+![Voltage Module](https://raw.githubusercontent.com/tebl/LED-Tuning-Board/refs/heads/main/gallery/2024-10-14%2003.23.58.jpg)
 
 
 # Schematic
