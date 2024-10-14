@@ -117,6 +117,7 @@ Note that some pin references will have a note attached to it, these are found b
 | U1 *1         | LM317 adjustable voltage regulator (TO-220)         |     1 |
 | U1 *2         | LD1117AV33 fixed 3.3v voltage regulator (TO-220)    |     1 |
 | U2            | 16-pin ZIF-socket                                   |     1 |
+|               | Pin header jumper caps, different colours as wanted |    10 |
 
 1) These account for the components used when installing a variable voltage regulator, follow the documentation for sizing the resistor without a specified voltage. Also, see *2 for a fixed regulator option.
 2) These are used for a 3.3v fixed voltage regulator, you would then no longer need those marked *1. For more information see documentation on building the device.
